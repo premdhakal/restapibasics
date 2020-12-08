@@ -23,7 +23,7 @@ public class DogController {
 	 * ResponseEntity<>(status) }
 	 */
 
-	@GetMapping("/{id}/dogs/breedById")
+	@GetMapping("/{id}/dogs/breedById") /*Ex.link [http://localhost:8080/1/dogs/breedById]*/
 	public ResponseEntity<String> getAllDogsById(@PathVariable Long id){
 		String breed = dogService.retrieveDogsBreedById(id);
 		return new ResponseEntity<String>(breed, HttpStatus.OK);
